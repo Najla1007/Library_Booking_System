@@ -15,7 +15,7 @@ import java.sql.DriverManager;
 
 public class database {
     
-     private static final String JDBC_URL = System.getenv("DB_URL");
+    private static final String JDBC_URL = System.getenv("DB_URL");
     private static final String JDBC_USERNAME = System.getenv("DB_USER");
     private static final String JDBC_PASSWORD = System.getenv("DB_PASS");
 
