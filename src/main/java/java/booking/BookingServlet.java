@@ -26,7 +26,7 @@ public class BookingServlet extends HttpServlet {
     public void init() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library_booking", "root", "admin");
+            conn = DriverManager.getConnection("jdbc:mysql://mysql.railway.internal:3306/library_booking", "root", "wYjluqRCHDtWqKptyeeGQJcULKGBEiAI");
         } catch (Exception e) {
             e.printStackTrace();
         }
