@@ -6,7 +6,7 @@ package java.controller;
  */
 
 import util.DBUtil;
-import dao.StudentDAO;
+import java.dao.StudentDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
