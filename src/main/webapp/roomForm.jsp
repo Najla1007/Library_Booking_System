@@ -4,7 +4,7 @@
     Author     : irfah
 --%>
 
-<%@ page contentType="text/html" pageEncoding="UTF-8" import="roomModule.Room" %>
+<%@ page contentType="text/html" pageEncoding="UTF-8" import="java.roomModule.Room" %>
 <%
     Room room = (Room) request.getAttribute("room");
 %>

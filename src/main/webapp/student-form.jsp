@@ -4,9 +4,9 @@
     Author     : ahnur
 --%>
 
-<%@page import="dao.StudentDAO"%>
+<%@page import="java.dao.StudentDAO"%>
 <%@page import="util.DBUtil"%>
-<%@page import="model.Student"%>
+<%@page import="java.model.Student"%>
 <%@page import="java.sql.Connection"%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%

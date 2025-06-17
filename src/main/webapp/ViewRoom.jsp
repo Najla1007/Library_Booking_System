@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page import="java.util.*, roomModule.Room" %>
+<%@ page import="java.util.*, java.roomModule.Room" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,7 +15,7 @@
     <body>
 
         <%
-            List<roomModule.Room> roomList = (List<roomModule.Room>) request.getAttribute("roomList");
+            List<java.roomModule.Room> roomList = (List<java.roomModule.Room>) request.getAttribute("roomList");
 
             if (roomList == null) {
                 out.println("<p style='text-align:center; color:red;'>No room data available. Please contact admin.</p>");

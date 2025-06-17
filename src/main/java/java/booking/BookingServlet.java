@@ -23,6 +23,7 @@ public class BookingServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private Connection conn;
 
+    @Override
     public void init() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
