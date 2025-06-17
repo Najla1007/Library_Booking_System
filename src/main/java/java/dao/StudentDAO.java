@@ -1,4 +1,4 @@
-package dao;
+package java.dao;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -9,7 +9,7 @@ package dao;
  *
  * @author ahnur
  */
-import model.Student;
+import java.model.Student;
 import java.sql.*;
 import java.util.*;
 
