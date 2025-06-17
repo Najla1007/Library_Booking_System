@@ -2,11 +2,11 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>BookingServlet</servlet-name>
-        <servlet-class>booking.BookingServlet</servlet-class>
+        <servlet-class>java.booking.BookingServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>StudentRoomController</servlet-name>
-        <servlet-class>controller.StudentRoomController</servlet-class>
+        <servlet-class>java.controller.StudentRoomController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>BookingServlet</servlet-name>
@@ -14,11 +14,11 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>RoomController</servlet-name>
-        <servlet-class>controller.RoomController</servlet-class>
+        <servlet-class>java.controller.RoomController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>NewServlet</servlet-name>
-        <servlet-class>controller.NewServlet</servlet-class>
+        <servlet-class>java.controller.NewServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RoomController</servlet-name>
