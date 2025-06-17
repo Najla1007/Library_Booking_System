@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-package java.controller;
+package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,8 +11,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.roomModule.Room;
-import java.roomModule.RoomDAO;
+import roomModule.Room;
+import roomModule.RoomDAO;
 
 /**
  *
@@ -59,7 +59,7 @@ public class StudentRoomController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         RoomDAO dao = new RoomDAO();
-        List<java.roomModule.Room> roomList = dao.getAllRooms();
+        List<Room> roomList = dao.getAllRooms();
         
         request.setAttribute("roomList", roomList);
         request.getRequestDispatcher("ViewRoom.jsp").forward(request,response);

@@ -5,7 +5,7 @@
 --%>
 
 <%@ page contentType="text/html" pageEncoding="UTF-8" %>
-<%@ page import="java.util.*, java.roomModule.RoomDAO, java.roomModule.Room" %>
+<%@ page import="java.util.*, roomModule.RoomDAO, roomModule.Room" %>
 <html>
     <head>
         <title>Room Management</title>

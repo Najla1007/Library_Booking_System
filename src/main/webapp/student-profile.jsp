@@ -4,7 +4,7 @@
     Author     : ahnur
 --%>
 
-<%@page import="java.model.Student"%>
+<%@page import="model.Student"%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 
 <%

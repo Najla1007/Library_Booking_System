@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-package java.booking;
+package booking;
 
-import util.DBUtil;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.servlet.ServletException;
@@ -23,12 +23,10 @@ public class BookingServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private Connection conn;
 
-    @Override
     public void init() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DBUtil.getConnection();
-
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library_booking", "root", "admin");
         } catch (Exception e) {
             e.printStackTrace();
         }
