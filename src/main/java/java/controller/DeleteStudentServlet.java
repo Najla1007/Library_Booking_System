@@ -1,4 +1,4 @@
-package controller;
+package java.controller;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -6,7 +6,7 @@ package controller;
  */
 
 import util.DBUtil;
-import dao.StudentDAO;
+import java.dao.StudentDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;

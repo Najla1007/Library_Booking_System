@@ -1,4 +1,4 @@
-package roomModule;
+package java.roomModule;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -10,6 +10,7 @@ package roomModule;
  * @author irfah
  */ 
 
+import util.DBUtil;
 import java.sql.*;
 import java.util.*;
 
@@ -17,7 +18,7 @@ public class RoomDAO {
 
     public void addRoom(Room room) {
         String sql = "INSERT INTO rooms (roomName, roomCapa, roomStatus, roomDesc) VALUES (?, ?, ?, ?)";
-        try (Connection con = database.getConnection(); PreparedStatement ps = con.prepareStatement(sql)) {
+        try (Connection con = DBUtil.getConnection(); PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setString(1, room.getRoomName());
             ps.setInt(2, room.getRoomCapa());
             ps.setString(3, room.getRoomStatus());
@@ -30,7 +31,7 @@ public class RoomDAO {
 
     public void updateRoom(Room room) {
         String sql = "UPDATE rooms SET roomName=?, roomCapa=?, roomStatus=?, roomDesc=? WHERE roomID=?";
-        try (Connection con = database.getConnection(); PreparedStatement ps = con.prepareStatement(sql)) {
+        try (Connection con = DBUtil.getConnection(); PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setString(1, room.getRoomName());
             ps.setInt(2, room.getRoomCapa());
             ps.setString(3, room.getRoomStatus());
@@ -44,7 +45,7 @@ public class RoomDAO {
 
     public void deleteRoom(int roomID) {
         String sql = "DELETE FROM rooms WHERE roomID=?";
-        try (Connection con = database.getConnection(); PreparedStatement ps = con.prepareStatement(sql)) {
+        try (Connection con = DBUtil.getConnection(); PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setInt(1, roomID);
             ps.executeUpdate();
         } catch (SQLException e) {
@@ -55,7 +56,7 @@ public class RoomDAO {
     public Room getRoomById(int roomID) {
         Room room = null;
         String sql = "SELECT * FROM rooms WHERE roomID=?";
-        try (Connection con = database.getConnection(); PreparedStatement ps = con.prepareStatement(sql)) {
+        try (Connection con = DBUtil.getConnection(); PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setInt(1, roomID);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
@@ -75,7 +76,7 @@ public class RoomDAO {
     public List<Room> getAllRooms() {
         List<Room> rooms = new ArrayList<>();
         String sql = "SELECT * FROM rooms";
-        try (Connection con = database.getConnection(); 
+        try (Connection con = DBUtil.getConnection(); 
             Statement stmt = con.createStatement()) {
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
